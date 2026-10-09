@@ -1,0 +1,236 @@
+:root {
+    --verde-escuro:   #6d3e174b;   /* fundo de botões / hovers */
+    --verde-salvia:   #b16161;   /* destaque */
+    --verde-medio:    #454a99b6;   /* cabeçalho / rodapé */
+    --verde-fundo:    #2d3442;   /* fundo geral */
+    --marrom:         #da8064;   /* subtítulos */
+    --creme:          #c9a158;   /* títulos claros */
+    --creme-escuro:   #fffafa00;   /* borda da imagem */
+    --texto:          #f8f7f7;   /* texto principal */
+    --texto-suave:    #adadaa;   /* parágrafos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--verde-fundo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--verde-medio);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    border-bottom: 1px solid var(--verde-salvia);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--creme);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--verde-salvia);
+}
+
+.menu a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--verde-salvia);
+}
+
+.menu .botao {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.menu .botao:hover {
+    background: transparent;
+    transform: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.saudacao {
+    color: var(--verde-salvia);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--creme);
+    margin-bottom: 10px;
+}
+
+.Curso {
+    font-size: 20px;
+    color: var(--marrom);
+    margin-bottom: 20px;
+}
+
+.descricao {
+    color: var(--texto-suave);
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--verde-salvia);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-3px);
+}
+
+.hero-imagem img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--creme-escuro);
+    box-shadow: 0 10px 30px rgb(22, 14, 14);
+}
+
+.secao {
+    padding: 70px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    font-size: 32px;
+    color: var(--creme);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--verde-salvia);
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.secao-cinza {
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+}
+
+.sobre-conteudo p {
+    color: var(--texto-suave);
+    font-size: 17px;
+}
+
+.cardapio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.cardapio-card {
+    background-color: var(--verde-medio);
+    border-left: 4px solid var(--verde-salvia);
+    border-radius: 10px;
+    padding: 22px 24px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cardapio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.cardapio-titulo {
+    font-size: 19px;
+    color: var(--creme);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--verde-salvia);
+    letter-spacing: 0.5px;
+}
+
+.cardapio-lista {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.cardapio-lista li {
+    color: var(--texto-suave);
+    font-size: 15px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.cardapio-lista li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    color: var(--verde-salvia);
+}
+
+.texto-contato {
+    color: var(--texto-suave);
+    margin-bottom: 25px;
+}
+
+.links-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rodape {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--verde-medio);
+    color: var(--texto-suave);
+    font-size: 14px;
+    border-top: 1px solid var(--verde-salvia);
+    margin-top: 40px;
+}
